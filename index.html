@@ -1,0 +1,3789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechEmergencia | Técnicos Confiables a Domicilio en Lima</title>
+  <meta name="description" content="Conectamos emergencias del hogar en Lima (gasfitería, electricidad, cerrajería) con técnicos independientes verificados. Contacto directo por WhatsApp en segundos sin comisiones.">
+  <meta name="theme-color" content="#1B2A4A">
+
+  <!-- Google Fonts: Fraunces (Serif con carácter) + DM Sans (Sans limpia y legible) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y PALETA DE COLOR
+       ========================================================================== */
+    :root {
+      --color-primary: #1B2A4A;      /* Azul oscuro principal */
+      --color-primary-dark: #121D34; /* Azul oscuro profundo */
+      --color-primary-light: #243860;
+      --color-bg: #F5F0E8;           /* Crema cálido de fondo */
+      --color-bg-card: #FFFFFF;      /* Superficie blanca limpia */
+      --color-bg-subtle: #ECE6DB;    /* Crema secundario / bordes */
+      --color-bg-tint: #FAF7F2;      /* Blanco crema para secciones */
+      --color-action: #2E4E8E;        /* Azul medio para acciones */
+      --color-action-hover: #233D72;
+      --color-accent: #E8A33D;        /* Ámbar cálido para urgencia y destacados */
+      --color-accent-light: #FDF3E3;
+      --color-accent-dark: #C48325;
+      --color-whatsapp: #1E8E49;      /* Verde sobrio y confiable para WhatsApp */
+      --color-whatsapp-hover: #167039;
+      --color-success: #15803D;
+      --color-danger: #B91C1C;
+      --color-text-main: #1B2A4A;
+      --color-text-muted: #57677D;
+      --color-text-light: #7E8C9F;
+      --color-border: rgba(27, 42, 74, 0.12);
+      --color-border-focus: #2E4E8E;
+      
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      
+      --shadow-sm: 0 2px 6px rgba(27, 42, 74, 0.04);
+      --shadow-md: 0 6px 18px rgba(27, 42, 74, 0.07);
+      --shadow-lg: 0 12px 32px rgba(27, 42, 74, 0.10);
+      --shadow-float: 0 18px 40px rgba(27, 42, 74, 0.14);
+
+      --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset y Fundamentos */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Enlaces y botones reset */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      border: none;
+      background: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Accesibilidad y foco */
+    :focus-visible {
+      outline: 2px solid var(--color-action);
+      outline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       TIPOGRAFÍA Y JERARQUÍA
+       ========================================================================== */
+    .font-serif {
+      font-family: var(--font-serif);
+      font-optical-sizing: auto;
+    }
+
+    .section-overline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-action);
+      margin-bottom: 0.55rem;
+    }
+
+    .section-overline::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 2px;
+      background-color: var(--color-accent);
+      border-radius: 2px;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--color-primary);
+      font-family: var(--font-serif);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3vw, 2.3rem);
+      letter-spacing: -0.015em;
+    }
+
+    h3 {
+      font-size: 1.28rem;
+    }
+
+    p {
+      color: var(--color-text-muted);
+    }
+
+    /* ==========================================================================
+       CONTENEDORES Y ESTRUCTURA
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .section {
+      padding: 4.5rem 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 3.2rem 0;
+      }
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+      max-width: 680px;
+    }
+
+    .section-header.text-center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-header.text-center .section-overline::before {
+      display: none;
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      margin-top: 0.6rem;
+    }
+
+    /* ==========================================================================
+       CABECERA FIJA CON DESENFOQUE
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(245, 240, 232, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .site-header.scrolled {
+      background-color: rgba(245, 240, 232, 0.96);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .brand-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-action));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: 0 4px 10px rgba(27, 42, 74, 0.18);
+    }
+
+    .brand-tag {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      background-color: var(--color-accent);
+      color: var(--color-primary-dark);
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-left: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+
+    .nav-link {
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: var(--color-text-main);
+      transition: color var(--transition-fast);
+      position: relative;
+      padding: 0.4rem 0;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-action);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: var(--color-action);
+      border-radius: 2px;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-full);
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      box-shadow: 0 2px 8px rgba(27, 42, 74, 0.15);
+    }
+
+    .nav-cta:hover {
+      background-color: var(--color-action);
+      transform: translateY(-1px);
+    }
+
+    /* Botón hamburguesa móvil */
+    .mobile-menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(27, 42, 74, 0.05);
+      color: var(--color-primary);
+    }
+
+    /* Cajón de navegación móvil */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background-color: var(--color-bg-card);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem 1.25rem 2rem;
+      box-shadow: var(--shadow-lg);
+      z-index: 99;
+      transform: translateY(-100%);
+      transition: transform var(--transition-normal);
+    }
+
+    .mobile-drawer.open {
+      transform: translateY(0);
+      display: block;
+    }
+
+    .mobile-drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-drawer-links a {
+      font-size: 1.05rem;
+      font-weight: 600;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(27, 42, 74, 0.06);
+    }
+
+    @media (max-width: 920px) {
+      .main-nav, .nav-cta {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding: 3.5rem 0 4.5rem;
+      background: radial-gradient(circle at 80% 20%, rgba(232, 163, 61, 0.09) 0%, transparent 45%),
+                  radial-gradient(circle at 10% 80%, rgba(46, 78, 142, 0.07) 0%, transparent 50%),
+                  var(--color-bg);
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #FFFFFF;
+      border: 1px solid var(--color-border);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 1.3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title {
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-action);
+    }
+
+    .hero-lead {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Caja de búsqueda rápida en el hero */
+    .hero-search-card {
+      background-color: var(--color-bg-card);
+      border-radius: var(--radius-xl);
+      padding: 1.25rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
+      max-width: 820px;
+      margin: 0 auto;
+      transition: box-shadow var(--transition-normal);
+    }
+
+    .hero-search-card:focus-within {
+      box-shadow: var(--shadow-float);
+    }
+
+    .quick-search-form {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr auto;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .quick-search-form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-field-group {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.5rem 0.9rem;
+      text-align: left;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .input-field-group:focus-within {
+      border-color: var(--color-action);
+      background-color: #FFFFFF;
+    }
+
+    .input-field-group label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .input-field-group select,
+    .input-field-group input {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-main);
+      width: 100%;
+      background: transparent;
+      outline: none;
+    }
+
+    .btn-search-hero {
+      background-color: var(--color-action);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.95rem 1.6rem;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      min-height: 52px;
+    }
+
+    .btn-search-hero:hover {
+      background-color: var(--color-action-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Métricas / Puntos de confianza del Hero */
+    .hero-trust-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2.2rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed rgba(27, 42, 74, 0.12);
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--color-text-main);
+    }
+
+    .trust-icon {
+      color: var(--color-action);
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       TARJETAS Y COMPONENTES REUTILIZABLES
+       ========================================================================== */
+    .card {
+      background-color: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(27, 42, 74, 0.2);
+    }
+
+    /* Insignia de estado: Disponible ahora con punto pulsante */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .status-badge.available {
+      background-color: #E6F4EA;
+      color: #137333;
+    }
+
+    .status-badge.unavailable {
+      background-color: #F1F3F4;
+      color: #5F6368;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #137333;
+      position: relative;
+    }
+
+    .pulse-dot::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 50%;
+      background-color: rgba(19, 115, 51, 0.4);
+      animation: pulseAnimation 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .pulse-dot.gray {
+      background-color: #9AA0A6;
+    }
+    .pulse-dot.gray::after {
+      display: none;
+    }
+
+    @keyframes pulseAnimation {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.9;
+      }
+      70% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    /* Insignia de Garantía */
+    .warranty-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--color-accent-light);
+      color: #8C5305;
+      border: 1px solid rgba(232, 163, 61, 0.3);
+    }
+
+    /* Especialidad Pill */
+    .specialty-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-action);
+      background-color: rgba(46, 78, 142, 0.08);
+      padding: 3px 9px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Estrellas doradas */
+    .stars-display {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      color: #E8A33D;
+    }
+
+    .rating-text {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      margin-left: 4px;
+    }
+
+    .review-count {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       BOTÓN WHATSAPP ELEGANTE
+       ========================================================================== */
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-whatsapp);
+      color: #FFFFFF !important;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.75rem 1.15rem;
+      border-radius: var(--radius-md);
+      transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: 0 3px 10px rgba(30, 142, 73, 0.22);
+      width: 100%;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--color-whatsapp-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(30, 142, 73, 0.3);
+    }
+
+    .btn-whatsapp svg {
+      width: 19px;
+      height: 19px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* Botón Secundario / Outline */
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      background-color: transparent;
+      color: var(--color-action);
+      border: 1px solid var(--color-border);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.65rem 1.1rem;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(46, 78, 142, 0.05);
+      border-color: var(--color-action);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--color-action);
+      color: #FFFFFF;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-md);
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-action-hover);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       TÉCNICOS DESTACADOS (CAROUSEL / GRID)
+       ========================================================================== */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Tarjeta de Técnico */
+    .tech-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(46, 78, 142, 0.25);
+    }
+
+    .tech-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Avatar con iniciales */
+    .avatar-initials {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      flex-shrink: 0;
+      box-shadow: 0 3px 8px rgba(27, 42, 74, 0.15);
+    }
+
+    .tech-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tech-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tech-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    .tech-badges-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-districts-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .district-chip {
+      font-size: 0.73rem;
+      font-weight: 500;
+      background-color: var(--color-bg-tint);
+      color: var(--color-text-muted);
+      border: 1px solid var(--color-border);
+      padding: 2px 7px;
+      border-radius: var(--radius-sm);
+    }
+
+    .tech-bio {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .tech-card-footer {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(27, 42, 74, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .tech-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .price-label {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .price-amount {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-family: var(--font-serif);
+    }
+
+    .tech-actions-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN DE BÚSQUEDA Y FILTROS (DIRECTORIO)
+       ========================================================================== */
+    .filter-panel {
+      background-color: var(--color-bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border);
+      padding: 1.5rem;
+      margin-bottom: 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr auto;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+
+    @media (max-width: 992px) {
+      .filter-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .filter-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .filter-item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .filter-item label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    .filter-control {
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 0.95rem;
+      font-size: 0.92rem;
+      color: var(--color-text-main);
+      width: 100%;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-control:focus {
+      background-color: #FFFFFF;
+      border-color: var(--color-action);
+      outline: none;
+    }
+
+    /* Toggle Switch para "Disponible ahora" */
+    .toggle-filter-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.75rem 0.95rem;
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      user-select: none;
+      height: 48px;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #CBD5E1;
+      transition: var(--transition-fast);
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: var(--transition-fast);
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--color-success);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    .toggle-label {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      white-space: nowrap;
+    }
+
+    /* Contador y resultados */
+    .results-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding: 0 0.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .results-count {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+    }
+
+    .results-count strong {
+      color: var(--color-primary);
+    }
+
+    .sort-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+    }
+
+    .sort-control select {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 4px 8px;
+      font-weight: 500;
+    }
+
+    /* Estado vacío */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      border: 1px dashed var(--color-border);
+      max-width: 580px;
+      margin: 2rem auto;
+    }
+
+    .empty-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: var(--color-bg);
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+
+    .empty-state h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-state p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       FORMULARIO: PEDIR AYUDA (URGENTE / PROGRAMADA)
+       ========================================================================== */
+    .request-layout {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .request-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .request-form-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 2.2rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+    }
+
+    @media (max-width: 600px) {
+      .request-form-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Selector Segmentado: Urgente vs Programada */
+    .urgency-segmented-control {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: var(--color-bg);
+      border-radius: var(--radius-md);
+      padding: 4px;
+      gap: 4px;
+      margin-bottom: 1.8rem;
+    }
+
+    .segmented-btn {
+      padding: 0.8rem 1rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--color-text-muted);
+      transition: all var(--transition-fast);
+    }
+
+    .segmented-btn.active {
+      background-color: #FFFFFF;
+      color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .segmented-btn.active.urgent-btn {
+      color: #92400E;
+      background-color: var(--color-accent-light);
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .form-group label .req {
+      color: var(--color-danger);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      color: var(--color-text-main);
+      width: 100%;
+      transition: all var(--transition-fast);
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      background-color: #FFFFFF;
+      border-color: var(--color-action);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(46, 78, 142, 0.12);
+    }
+
+    .form-textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-help {
+      font-size: 0.76rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Lista de Mis Solicitudes */
+    .requests-history-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 1.8rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .requests-history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      max-height: 520px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .request-item {
+      padding: 1.1rem;
+      border-radius: var(--radius-md);
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      transition: border-color var(--transition-fast);
+    }
+
+    .request-item:hover {
+      border-color: rgba(46, 78, 142, 0.3);
+    }
+
+    .request-item-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .req-code {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-action);
+      letter-spacing: 0.05em;
+    }
+
+    .req-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+    }
+
+    .req-badge.pending {
+      background-color: #FEF3C7;
+      color: #92400E;
+    }
+
+    .req-badge.completed {
+      background-color: #DCFCE7;
+      color: #166534;
+    }
+
+    .req-badge.cancelled {
+      background-color: #F1F5F9;
+      color: #64748B;
+    }
+
+    .req-desc {
+      font-size: 0.86rem;
+      color: var(--color-text-main);
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+
+    .req-meta-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.76rem;
+      color: var(--color-text-muted);
+      border-top: 1px dashed rgba(27, 42, 74, 0.1);
+      padding-top: 8px;
+      margin-top: 6px;
+    }
+
+    /* ==========================================================================
+       COTIZADOR REFERENCIAL
+       ========================================================================== */
+    .calculator-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-md);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 820px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .calc-result-box {
+      background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.6rem;
+      color: #FFFFFF;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calc-result-box::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -30%;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 163, 61, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .calc-range-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.5rem;
+    }
+
+    .calc-price-display {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 0.4rem;
+      line-height: 1.1;
+    }
+
+    .calc-disclaimer {
+      font-size: 0.76rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.45;
+      margin-top: 1rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* Radio Pills en el cotizador */
+    .pill-radio-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 8px;
+    }
+
+    .pill-radio-btn {
+      position: relative;
+    }
+
+    .pill-radio-btn input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .pill-radio-label {
+      display: block;
+      padding: 0.65rem 0.8rem;
+      text-align: center;
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .pill-radio-btn input:checked + .pill-radio-label {
+      background-color: var(--color-action);
+      color: #FFFFFF;
+      border-color: var(--color-action);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ==========================================================================
+       SECCIÓN DE RESEÑAS
+       ========================================================================== */
+    .reviews-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.3fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 880px) {
+      .reviews-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .review-form-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .star-rating-picker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    .star-btn {
+      color: #CBD5E1;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+      padding: 2px;
+    }
+
+    .star-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    .star-btn.active, .star-btn:hover, .star-btn.hover-active {
+      color: #E8A33D;
+      transform: scale(1.15);
+    }
+
+    .star-rating-hint {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+      min-height: 1.2rem;
+    }
+
+    .reviews-stream {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      max-height: 600px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .review-bubble {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 1.3rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .review-bubble-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .reviewer-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: var(--color-bg);
+      color: var(--color-action);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--color-primary);
+    }
+
+    .reviewed-tech-tag {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    .review-text {
+      font-size: 0.9rem;
+      color: var(--color-text-main);
+      line-height: 1.5;
+    }
+
+    .review-date {
+      font-size: 0.72rem;
+      color: var(--color-text-light);
+      margin-top: 0.6rem;
+    }
+
+    /* ==========================================================================
+       SECCIÓN SOY TÉCNICO
+       ========================================================================== */
+    .technician-join-card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .technician-join-card {
+        padding: 1.5rem;
+      }
+    }
+
+    .districts-multiselect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 8px;
+      max-height: 160px;
+      overflow-y: auto;
+      padding: 8px;
+      background-color: var(--color-bg-tint);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .district-checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--color-text-main);
+      cursor: pointer;
+    }
+
+    .district-checkbox-label input {
+      accent-color: var(--color-action);
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ==========================================================================
+       PIE DE PÁGINA
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--color-primary-dark);
+      color: #FFFFFF;
+      padding: 4rem 0 2rem;
+      margin-top: auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.92rem;
+      margin-top: 0.9rem;
+      max-width: 380px;
+    }
+
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.88rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-badge-direct {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       MODAL DE CONFIRMACIÓN Y DETALLE
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(18, 29, 52, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition-normal);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-window {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      max-width: 540px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: var(--shadow-float);
+      position: relative;
+      transform: translateY(20px) scale(0.97);
+      transition: transform var(--transition-normal);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-backdrop.active .modal-window {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color var(--transition-fast);
+    }
+
+    .modal-close-btn:hover {
+      background-color: #E2D9CB;
+    }
+
+    .modal-check-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #DCFCE7;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+
+    /* ==========================================================================
+       TOAST NOTIFICATIONS (AVISOS EMERGENTES)
+       ========================================================================== */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .toast-container {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+
+    .toast {
+      background-color: var(--color-primary-dark);
+      color: #FFFFFF;
+      padding: 0.95rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-float);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      min-width: 280px;
+      max-width: 420px;
+      pointer-events: auto;
+      animation: toastIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      border-left: 4px solid var(--color-accent);
+    }
+
+    .toast.success {
+      border-left-color: #22C55E;
+    }
+
+    .toast.info {
+      border-left-color: #3B82F6;
+    }
+
+    .toast.warning {
+      border-left-color: var(--color-accent);
+    }
+
+    @keyframes toastIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes toastOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       CABECERA FIJA CON LOGO Y NAVEGACIÓN
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio de TechEmergencia">
+          <div class="brand-icon-box">
+            <!-- Icono SVG propio: Rayo de auxilio y llave técnica -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <span>TechEmergencia</span>
+          <span class="brand-tag">Lima</span>
+        </a>
+
+        <!-- Enlaces principales de escritorio -->
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#inicio" class="nav-link active">Inicio</a>
+          <a href="#tecnicos" class="nav-link">Técnicos</a>
+          <a href="#pedir-ayuda" class="nav-link">Pedir Ayuda</a>
+          <a href="#cotizador" class="nav-link">Cotizador</a>
+          <a href="#resenas" class="nav-link">Reseñas</a>
+          <a href="#soy-tecnico" class="nav-link">Soy Técnico</a>
+        </nav>
+
+        <a href="#pedir-ayuda" class="nav-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>Urgencia Ahora</span>
+        </a>
+
+        <!-- Botón menú móvil -->
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú desplegable para móviles -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-links">
+        <a href="#inicio" class="mobile-nav-item">Inicio</a>
+        <a href="#tecnicos" class="mobile-nav-item">Buscar Técnicos en Lima</a>
+        <a href="#pedir-ayuda" class="mobile-nav-item">Pedir Ayuda (Urgente / Programada)</a>
+        <a href="#cotizador" class="mobile-nav-item">Cotizador Referencial</a>
+        <a href="#resenas" class="mobile-nav-item">Calificaciones y Reseñas</a>
+        <a href="#soy-tecnico" class="mobile-nav-item">Registro para Técnicos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         1. HERO SECTION: TITULAR POTENTE + BUSCADOR INTEGRADO
+         ====================================================================== -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Red de Emergencias Técnicas en Lima Metropolitana</span>
+            </div>
+
+            <h1 class="hero-title">
+              ¿Fuga, apagón o cerrojo trabado?<br>
+              Encuentra a un técnico <em>en tu distrito</em> en segundos.
+            </h1>
+
+            <p class="hero-lead">
+              Conectamos a hogares de Lima con gasfiteros, electricistas y técnicos independientes disponibles al instante. 
+              Contacto directo por WhatsApp, sin intermediarios ni cobros ocultos de la app.
+            </p>
+
+            <!-- Buscador Rápido del Hero -->
+            <div class="hero-search-card">
+              <form class="quick-search-form" id="heroQuickSearchForm" onsubmit="event.preventDefault(); window.TechApp.handleHeroSearch();">
+                <div class="input-field-group">
+                  <label for="heroDistrict">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Distrito en Lima
+                  </label>
+                  <select id="heroDistrict">
+                    <option value="all">Todos los distritos de Lima</option>
+                    <option value="Miraflores">Miraflores</option>
+                    <option value="San Isidro">San Isidro</option>
+                    <option value="Surco">Santiago de Surco</option>
+                    <option value="San Borja">San Borja</option>
+                    <option value="La Molina">La Molina</option>
+                    <option value="Jesús María">Jesús María</option>
+                    <option value="Lince">Lince</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="Los Olivos">Los Olivos</option>
+                    <option value="Ate">Ate</option>
+                  </select>
+                </div>
+
+                <div class="input-field-group">
+                  <label for="heroSpecialty">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    Especialidad
+                  </label>
+                  <select id="heroSpecialty">
+                    <option value="all">Todas las especialidades</option>
+                    <option value="Gasfitería">Gasfitería / Cañerías</option>
+                    <option value="Electricidad">Electricidad / Cortos</option>
+                    <option value="Mantenimiento & Cerrajería">Cerrajería / Mantenimiento</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn-search-hero">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Buscar Técnico</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Barra de Confianza -->
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Técnicos verificados con garantía en días</span>
+              </div>
+              <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Mensaje directo a WhatsApp listo para enviar</span>
+              </div>
+              <div class="trust-item">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <span>Trato directo: la app no cobra comisiones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TÉCNICOS DESTACADOS
+         ====================================================================== -->
+    <section class="section" style="background-color: var(--color-bg-tint); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">Recomendados por la comunidad</span>
+          <h2>Técnicos destacados en Lima</h2>
+          <p>Profesionales independientes con las mejores calificaciones y alta disponibilidad para urgencias.</p>
+        </div>
+
+        <div class="featured-grid" id="featuredTechniciansContainer">
+          <!-- Renderizado dinámico de técnicos destacados -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. BUSCADOR Y DIRECTORIO COMPLETO DE TÉCNICOS
+         ====================================================================== -->
+    <section class="section" id="tecnicos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">Directorio en tiempo real</span>
+          <h2>Encuentra técnicos disponibles en tu zona</h2>
+          <p>Filtra por distrito de Lima, especialidad o activa el interruptor de disponibilidad inmediata.</p>
+        </div>
+
+        <!-- Panel de Filtros -->
+        <div class="filter-panel">
+          <div class="filter-grid">
+            <!-- Distrito -->
+            <div class="filter-item">
+              <label for="filterDistrict">Distrito de Lima</label>
+              <select id="filterDistrict" class="filter-control" onchange="window.TechApp.handleFilterChange()">
+                <option value="all">Todos los distritos</option>
+                <option value="Miraflores">Miraflores</option>
+                <option value="San Isidro">San Isidro</option>
+                <option value="Surco">Santiago de Surco</option>
+                <option value="San Borja">San Borja</option>
+                <option value="La Molina">La Molina</option>
+                <option value="Jesús María">Jesús María</option>
+                <option value="Lince">Lince</option>
+                <option value="San Miguel">San Miguel</option>
+                <option value="Los Olivos">Los Olivos</option>
+                <option value="Ate">Ate</option>
+              </select>
+            </div>
+
+            <!-- Especialidad -->
+            <div class="filter-item">
+              <label for="filterSpecialty">Especialidad</label>
+              <select id="filterSpecialty" class="filter-control" onchange="window.TechApp.handleFilterChange()">
+                <option value="all">Todas las especialidades</option>
+                <option value="Gasfitería">Gasfitería / Plomería</option>
+                <option value="Electricidad">Electricidad</option>
+                <option value="Mantenimiento & Cerrajería">Cerrajería / Mantenimiento</option>
+              </select>
+            </div>
+
+            <!-- Buscador por nombre o palabra clave -->
+            <div class="filter-item">
+              <label for="filterKeyword">Buscar por nombre o palabra</label>
+              <input type="text" id="filterKeyword" class="filter-control" placeholder="Ej. fuga, terma, Carlos..." oninput="window.TechApp.handleFilterChange()">
+            </div>
+
+            <!-- Toggle: Disponible ahora -->
+            <div class="filter-item">
+              <label>&nbsp;</label>
+              <div class="toggle-filter-wrapper" onclick="window.TechApp.toggleAvailabilityFilter()">
+                <label class="toggle-switch">
+                  <input type="checkbox" id="filterAvailableOnly" onchange="window.TechApp.handleFilterChange()">
+                  <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Disponible ahora</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barra de conteo y ordenamiento -->
+        <div class="results-meta-bar">
+          <div class="results-count" id="resultsCounter">
+            Mostrando <strong>0 técnicos</strong> encontrados
+          </div>
+          <div class="sort-control">
+            <span>Ordenar por:</span>
+            <select id="sortBy" onchange="window.TechApp.handleFilterChange()">
+              <option value="rating">Mejor calificados (estrellas)</option>
+              <option value="price_asc">Menor tarifa base</option>
+              <option value="warranty">Mayor tiempo de garantía</option>
+              <option value="reviews">Más cantidad de reseñas</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Contenedor de Tarjetas de Técnicos -->
+        <div class="featured-grid" id="techniciansGrid">
+          <!-- Renderizado dinámico -->
+        </div>
+
+        <!-- Estado vacío si no hay coincidencias -->
+        <div class="empty-state" id="emptyStateSearch" style="display: none;">
+          <div class="empty-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3>No encontramos técnicos con esos filtros</h3>
+          <p>Prueba seleccionando "Todos los distritos" o desactivando el filtro de disponibilidad inmediata para ver más profesionales.</p>
+          <button class="btn-primary" onclick="window.TechApp.resetFilters()">Restablecer filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. PEDIR AYUDA (URGENTE / PROGRAMADA) + MIS SOLICITUDES
+         ====================================================================== -->
+    <section class="section" id="pedir-ayuda" style="background-color: var(--color-bg-tint);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">Asistencia a domicilio</span>
+          <h2>Registra tu solicitud de auxilio técnico</h2>
+          <p>Indica si requieres atención inmediata o prefieres programar una visita con fecha y hora.</p>
+        </div>
+
+        <div class="request-layout">
+          <!-- Formulario de Solicitud -->
+          <div class="request-form-card">
+            <!-- Selector Segmentado Urgente vs Programada -->
+            <div class="urgency-segmented-control" role="tablist">
+              <button type="button" class="segmented-btn urgent-btn active" id="btnModeUrgent" onclick="window.TechApp.setRequestMode('urgent')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span>Urgente (Ahora)</span>
+              </button>
+              <button type="button" class="segmented-btn" id="btnModeScheduled" onclick="window.TechApp.setRequestMode('scheduled')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Programada</span>
+              </button>
+            </div>
+
+            <form id="emergencyRequestForm" onsubmit="window.TechApp.handleRequestSubmit(event)">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="reqService">Tipo de servicio <span class="req">*</span></label>
+                  <select id="reqService" class="form-select" required>
+                    <option value="" disabled selected>Selecciona especialidad</option>
+                    <option value="Gasfitería">Gasfitería (fugas, tuberías, desatoros)</option>
+                    <option value="Electricidad">Electricidad (cortos, termas, tableros)</option>
+                    <option value="Mantenimiento & Cerrajería">Cerrajería y Mantenimiento</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="reqDistrict">Distrito en Lima <span class="req">*</span></label>
+                  <select id="reqDistrict" class="form-select" required>
+                    <option value="" disabled selected>Selecciona tu distrito</option>
+                    <option value="Miraflores">Miraflores</option>
+                    <option value="San Isidro">San Isidro</option>
+                    <option value="Surco">Santiago de Surco</option>
+                    <option value="San Borja">San Borja</option>
+                    <option value="La Molina">La Molina</option>
+                    <option value="Jesús María">Jesús María</option>
+                    <option value="Lince">Lince</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="Los Olivos">Los Olivos</option>
+                    <option value="Ate">Ate</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Campos dinámicos de Programada (Fecha y Hora) -->
+              <div class="form-row-2" id="scheduledFieldsGroup" style="display: none;">
+                <div class="form-group">
+                  <label for="reqDate">Fecha deseada <span class="req">*</span></label>
+                  <input type="date" id="reqDate" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="reqTime">Hora preferida <span class="req">*</span></label>
+                  <input type="time" id="reqTime" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reqDescription">Descripción del problema <span class="req">*</span></label>
+                <textarea id="reqDescription" class="form-textarea" placeholder="Ej. Se rompió una llave de paso en la lavandería y sale un chorro continuo de agua..." required></textarea>
+                <span class="form-help">Sé lo más específico posible para que el técnico acuda con los repuestos indicados.</span>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="reqClientName">Tu nombre completo <span class="req">*</span></label>
+                  <input type="text" id="reqClientName" class="form-input" placeholder="Ej. Ana Morales" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="reqClientPhone">Teléfono / WhatsApp de contacto <span class="req">*</span></label>
+                  <input type="tel" id="reqClientPhone" class="form-input" placeholder="Ej. 987 654 321" pattern="[0-9]{9}" required>
+                  <span class="form-help">9 dígitos peruanos para que el técnico confirme.</span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; margin-top: 0.5rem; height: 50px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span id="btnSubmitRequestLabel">Enviar Solicitud Urgente</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Mis Solicitudes (Guardado localmente) -->
+          <div class="requests-history-card">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <h3 style="font-size: 1.18rem;">Mis Solicitudes</h3>
+              <span class="status-badge" style="background-color: var(--color-bg); font-size: 0.72rem;" id="myRequestsBadgeCount">0 registradas</span>
+            </div>
+            <p style="font-size: 0.84rem; margin-top: 4px;">Historial de servicios solicitados en tu navegador con estado y código de seguimiento.</p>
+
+            <div class="requests-history-list" id="requestsHistoryContainer">
+              <!-- Renderizado de solicitudes creadas -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. COTIZADOR REFERENCIAL EN SOLES
+         ====================================================================== -->
+    <section class="section" id="cotizador">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-overline">Transparencia de precios en Lima</span>
+          <h2>Cotizador referencial en soles</h2>
+          <p>Calcula un rango estimado de mano de obra según la especialidad, nivel de urgencia y complejidad de la labor.</p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calc-grid">
+            <!-- Controles del cotizador -->
+            <div class="calc-controls">
+              <!-- Servicio -->
+              <div class="form-group">
+                <label>1. Especialidad requerida</label>
+                <div class="pill-radio-group">
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcService" id="calcServGas" value="Gasfitería" checked onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcServGas">Gasfitería</label>
+                  </div>
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcService" id="calcServElec" value="Electricidad" onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcServElec">Electricidad</label>
+                  </div>
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcService" id="calcServCer" value="Cerrajería" onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcServCer">Cerrajería</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Urgencia -->
+              <div class="form-group" style="margin-top: 1.2rem;">
+                <label>2. Nivel de urgencia</label>
+                <div class="pill-radio-group">
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcUrgency" id="calcUrgInm" value="inmediata" checked onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcUrgInm">Inmediata (&lt;1h)</label>
+                  </div>
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcUrgency" id="calcUrgHoy" value="hoy" onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcUrgHoy">Hoy mismo</label>
+                  </div>
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcUrgency" id="calcUrgProg" value="programada" onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcUrgProg">Programada</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Complejidad -->
+              <div class="form-group" style="margin-top: 1.2rem;">
+                <label>3. Complejidad del trabajo</label>
+                <div class="pill-radio-group">
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcComplexity" id="calcCompSim" value="simple" checked onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcCompSim">Simple</label>
+                  </div>
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcComplexity" id="calcCompMed" value="media" onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcCompMed">Media</label>
+                  </div>
+                  <div class="pill-radio-btn">
+                    <input type="radio" name="calcComplexity" id="calcCompCom" value="compleja" onchange="window.TechApp.updateCalculator()">
+                    <label class="pill-radio-label" for="calcCompCom">Compleja</label>
+                  </div>
+                </div>
+                <span class="form-help" id="calcComplexityDescription">
+                  Ej. Cambio de empaques, ajuste de llaves de lavadero o enchufe único.
+                </span>
+              </div>
+            </div>
+
+            <!-- Caja con resultado animado -->
+            <div class="calc-result-box">
+              <div class="calc-range-title">Presupuesto estimado en Lima</div>
+              <div class="calc-price-display" id="calcPriceRangeDisplay">S/ 70 - S/ 110</div>
+              <div style="font-size: 0.88rem; color: #FFFFFF; font-weight: 500;">Tarifa base referencial de mano de obra</div>
+
+              <div class="calc-disclaimer">
+                <strong>Estimado no vinculante:</strong> El técnico evaluará en el lugar y acordará el precio final exacto contigo antes de iniciar la labor. Los repuestos y materiales de ferretería se cobran por separado según boleta.
+              </div>
+
+              <button class="btn-whatsapp" style="margin-top: 1.4rem; background-color: var(--color-accent); color: var(--color-primary-dark) !important;" onclick="window.TechApp.searchFromCalculator()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Ver técnicos de este rubro</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. RESEÑAS Y CALIFICACIONES
+         ====================================================================== -->
+    <section class="section" id="resenas" style="background-color: var(--color-bg-tint);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-overline">Opiniones auténticas</span>
+          <h2>Reseñas y experiencia de clientes</h2>
+          <p>Califica el trabajo de tu técnico con estrellas y comentarios para mantener la red confiable y segura.</p>
+        </div>
+
+        <div class="reviews-layout">
+          <!-- Formulario para dejar reseña -->
+          <div class="review-form-card">
+            <h3 style="margin-bottom: 0.6rem;">Calificar a un técnico</h3>
+            <p style="font-size: 0.85rem; margin-bottom: 1.2rem;">Tu testimonio actualiza de inmediato el promedio del profesional.</p>
+
+            <form id="reviewSubmitForm" onsubmit="window.TechApp.handleReviewSubmit(event)">
+              <div class="form-group">
+                <label for="reviewTechSelect">Técnico que te atendió <span class="req">*</span></label>
+                <select id="reviewTechSelect" class="form-select" required>
+                  <option value="" disabled selected>Elige un técnico</option>
+                  <!-- Opciones cargadas dinámicamente -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Tu calificación <span class="req">*</span></label>
+                <div class="star-rating-picker" id="starPicker">
+                  <button type="button" class="star-btn" data-star="1" aria-label="1 estrella">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </button>
+                  <button type="button" class="star-btn" data-star="2" aria-label="2 estrellas">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </button>
+                  <button type="button" class="star-btn" data-star="3" aria-label="3 estrellas">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </button>
+                  <button type="button" class="star-btn" data-star="4" aria-label="4 estrellas">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </button>
+                  <button type="button" class="star-btn" data-star="5" aria-label="5 estrellas">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </button>
+                </div>
+                <div class="star-rating-hint" id="starHintText">Haz clic en las estrellas para calificar</div>
+                <input type="hidden" id="selectedStarValue" value="5" required>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="reviewAuthor">Tu nombre <span class="req">*</span></label>
+                  <input type="text" id="reviewAuthor" class="form-input" placeholder="Ej. Roberto Castillo" required>
+                </div>
+                <div class="form-group">
+                  <label for="reviewDistrict">Distrito <span class="req">*</span></label>
+                  <select id="reviewDistrict" class="form-select" required>
+                    <option value="Miraflores">Miraflores</option>
+                    <option value="San Isidro">San Isidro</option>
+                    <option value="Surco">Surco</option>
+                    <option value="San Borja">San Borja</option>
+                    <option value="La Molina">La Molina</option>
+                    <option value="Jesús María">Jesús María</option>
+                    <option value="Lince">Lince</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="Los Olivos">Los Olivos</option>
+                    <option value="Ate">Ate</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reviewComment">Comentario sobre el servicio <span class="req">*</span></label>
+                <textarea id="reviewComment" class="form-textarea" placeholder="¿Cómo fue la puntualidad, limpieza y solución del problema?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%;">
+                <span>Publicar Calificación</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Muro de Reseñas Recientes -->
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <h3 style="font-size: 1.15rem;">Opiniones verificadas recientes</h3>
+              <span class="status-badge" style="background-color: var(--color-bg); font-size: 0.76rem;" id="totalReviewsCountBadge">10 reseñas</span>
+            </div>
+            <div class="reviews-stream" id="reviewsContainer">
+              <!-- Renderizado dinámico de reseñas -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. SOY TÉCNICO: REGISTRO GRATUITO
+         ====================================================================== -->
+    <section class="section" id="soy-tecnico">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-overline">Únete a la red</span>
+          <h2>¿Eres gasfitero o electricista independiente en Lima?</h2>
+          <p>Regístrate gratis sin comisiones por servicio. Recibe clientes de tu distrito directamente en tu WhatsApp.</p>
+        </div>
+
+        <div class="technician-join-card">
+          <form id="techRegistrationForm" onsubmit="window.TechApp.handleTechRegistration(event)">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="newTechName">Nombres y Apellidos completos <span class="req">*</span></label>
+                <input type="text" id="newTechName" class="form-input" placeholder="Ej. Juan Carlos Mendoza" required>
+              </div>
+
+              <div class="form-group">
+                <label for="newTechSpecialty">Especialidad Principal <span class="req">*</span></label>
+                <select id="newTechSpecialty" class="form-select" required>
+                  <option value="" disabled selected>Selecciona especialidad</option>
+                  <option value="Gasfitería">Gasfitería / Plomería de Emergencia</option>
+                  <option value="Electricidad">Electricidad e Iluminación</option>
+                  <option value="Mantenimiento & Cerrajería">Cerrajería y Mantenimiento Residencial</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Distritos de Lima donde atiendes <span class="req">*</span></label>
+              <span class="form-help" style="margin-bottom: 6px;">Selecciona los distritos donde puedes trasladarte con rapidez:</span>
+              <div class="districts-multiselect-grid" id="newTechDistrictsList">
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="Miraflores"> Miraflores</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="San Isidro"> San Isidro</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="Surco"> Surco</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="San Borja"> San Borja</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="La Molina"> La Molina</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="Jesús María"> Jesús María</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="Lince"> Lince</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="San Miguel"> San Miguel</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="Los Olivos"> Los Olivos</label>
+                <label class="district-checkbox-label"><input type="checkbox" name="techDistricts" value="Ate"> Ate</label>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="newTechPhone">Número de WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="newTechPhone" class="form-input" placeholder="Ej. 998765432" pattern="[0-9]{9}" required>
+                <span class="form-help">Tu número de 9 dígitos para recibir los mensajes prellenados.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="newTechBasePrice">Tarifa base referencial (S/) <span class="req">*</span></label>
+                <input type="number" id="newTechBasePrice" class="form-input" placeholder="Ej. 60" min="30" max="250" required>
+                <span class="form-help">Costo mínimo referencial por visita / diagnóstico.</span>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="newTechWarranty">Garantía que ofreces (días) <span class="req">*</span></label>
+                <select id="newTechWarranty" class="form-select" required>
+                  <option value="15">15 días de garantía</option>
+                  <option value="30" selected>30 días de garantía</option>
+                  <option value="45">45 días de garantía</option>
+                  <option value="60">60 días de garantía</option>
+                  <option value="90">90 días de garantía</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Disponibilidad inicial</label>
+                <div class="toggle-filter-wrapper" style="margin-top: 4px;">
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="newTechAvailable" checked>
+                    <span class="slider"></span>
+                  </label>
+                  <span class="toggle-label">Disponible ahora para emergencias</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="newTechBio">Presentación y herramientas <span class="req">*</span></label>
+              <textarea id="newTechBio" class="form-textarea" placeholder="Ej. Técnico con 8 años de experiencia, egresado de Sencico. Cuento con equipo de detección y vehículo propio para emergencias." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; height: 50px; font-size: 1rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+              <span>Completar Registro y Aparecer en el Buscador</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       PIE DE PÁGINA
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color: #FFFFFF;">
+            <div class="brand-icon-box" style="background: var(--color-action);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span>TechEmergencia</span>
+            <span class="brand-tag">Lima</span>
+          </div>
+          <p>
+            Plataforma vecinal de conexión directa para emergencias técnicas del hogar en Lima Metropolitana.
+            Sin comisiones, pagos directos de mutuo acuerdo entre cliente y profesional.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Distritos con Cobertura</h4>
+          <ul class="footer-links">
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterDistrict('Miraflores')">Miraflores</a></li>
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterDistrict('San Isidro')">San Isidro</a></li>
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterDistrict('Surco')">Santiago de Surco</a></li>
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterDistrict('San Borja')">San Borja</a></li>
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterDistrict('Los Olivos')">Los Olivos y Lima Norte</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Especialidades</h4>
+          <ul class="footer-links">
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterSpecialty('Gasfitería')">Gasfitería y Plomería</a></li>
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterSpecialty('Electricidad')">Electricidad Residencial</a></li>
+            <li><a href="#tecnicos" onclick="window.TechApp.quickFilterSpecialty('Mantenimiento & Cerrajería')">Cerrajería de Emergencia</a></li>
+            <li><a href="#cotizador">Calculadora de Tarifas en Soles</a></li>
+            <li><a href="#soy-tecnico">Registrarse como Técnico</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 TechEmergencia Lima. Todos los derechos reservados.
+        </div>
+        <div class="footer-badge-direct">
+          ✓ Trato directo · Cero cobros de intermediación
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODAL DE CONFIRMACIÓN DE SOLICITUD
+       ======================================================================== -->
+  <div class="modal-backdrop" id="confirmationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="window.TechApp.closeConfirmationModal()" aria-label="Cerrar modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-check-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h3 id="modalTitle" style="font-size: 1.45rem; margin-bottom: 0.4rem;">¡Solicitud Registrada con Éxito!</h3>
+        <p style="font-size: 0.92rem;">Tu pedido ha quedado guardado con estado <strong style="color: #92400E;">Pendiente</strong>.</p>
+      </div>
+
+      <div id="modalSummaryBody" style="background-color: var(--color-bg-tint); border-radius: var(--radius-md); padding: 1.2rem; border: 1px solid var(--color-border); margin-bottom: 1.5rem; font-size: 0.9rem;">
+        <!-- Resumen inyectado -->
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <button class="btn-whatsapp" id="modalActionWhatsappBtn" onclick="window.TechApp.handleModalWhatsappDispatch()">
+          <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"></path></svg>
+          <span id="modalWhatsappBtnText">Contactar Técnico Disponible en tu Distrito</span>
+        </button>
+        <button class="btn-outline" onclick="window.TechApp.closeConfirmationModal()">
+          Cerrar resumen
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor para Avisos Toast -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       LÓGICA JAVASCRIPT: CAPA DE DATOS Y APLICACIÓN
+       ======================================================================== -->
+  <script>
+    /**
+     * TechEmergencia - Arquitectura modular separando datos e interfaz
+     */
+
+    // --------------------------------------------------------------------------
+    // 1. CAPA DE DATOS (DataStore): Abstracción y persistencia en localStorage
+    // --------------------------------------------------------------------------
+    const DataStore = (() => {
+      const STORAGE_KEYS = {
+        TECHNICIANS: 'techemergencia_technicians_v1',
+        REQUESTS: 'techemergencia_requests_v1',
+        REVIEWS: 'techemergencia_reviews_v1'
+      };
+
+      // 10 Técnicos iniciales con nombres peruanos ficticios, distritos y datos realistas
+      const INITIAL_TECHNICIANS = [
+        {
+          id: 'tech-001',
+          name: 'Carlos Huamán Quispe',
+          specialty: 'Gasfitería',
+          districts: ['Miraflores', 'San Isidro', 'Surco', 'San Borja'],
+          baseRate: 55,
+          rating: 4.9,
+          reviewsCount: 26,
+          warrantyDays: 60,
+          isAvailable: true,
+          phone: '987123456',
+          bio: 'Técnico especialista egresado de Sencico con 12 años de experiencia. Reparación inmediata de fugas, bombas hidroneumáticas, termas eléctricas y desatoros.'
+        },
+        {
+          id: 'tech-002',
+          name: 'Jorge Quispe Mamani',
+          specialty: 'Electricidad',
+          districts: ['Surco', 'San Borja', 'La Molina', 'Miraflores'],
+          baseRate: 65,
+          rating: 4.9,
+          reviewsCount: 31,
+          warrantyDays: 45,
+          isAvailable: true,
+          phone: '994567890',
+          bio: 'Electricista con instrumental de diagnóstico digital. Solución inmediata de cortocircuitos, llaves térmicas, balanceo de cargas e iluminación LED.'
+        },
+        {
+          id: 'tech-003',
+          name: 'Rosa Elvira Mamani',
+          specialty: 'Gasfitería',
+          districts: ['Jesús María', 'Lince', 'San Miguel', 'San Isidro'],
+          baseRate: 50,
+          rating: 4.8,
+          reviewsCount: 19,
+          warrantyDays: 30,
+          isAvailable: true,
+          phone: '976543210',
+          bio: 'Maestra gasfitera en Lima Centro y Oeste. Instalación de griferías finas, detección no invasiva de filtraciones y cambio de tuberías de agua y desagüe.'
+        },
+        {
+          id: 'tech-004',
+          name: 'Miguel Ángel Mendoza',
+          specialty: 'Electricidad',
+          districts: ['Los Olivos', 'San Miguel', 'Jesús María'],
+          baseRate: 45,
+          rating: 4.7,
+          reviewsCount: 15,
+          warrantyDays: 30,
+          isAvailable: false,
+          phone: '981234567',
+          bio: 'Instalaciones eléctricas residenciales en Lima Norte y Centro. Cableado seguro, pozos a tierra y revisión de fugas de corriente para optimizar consumo.'
+        },
+        {
+          id: 'tech-005',
+          name: 'Luis Fernando Ramos',
+          specialty: 'Gasfitería',
+          districts: ['San Isidro', 'Miraflores', 'San Borja', 'Surco'],
+          baseRate: 70,
+          rating: 5.0,
+          reviewsCount: 28,
+          warrantyDays: 90,
+          isAvailable: true,
+          phone: '993456789',
+          bio: 'Especialista en departamentos residenciales. Emergencias de agua las 24 horas, cambio de válvulas de paso, presurizadores y garantía por escrito.'
+        },
+        {
+          id: 'tech-006',
+          name: 'Walter Flores Candia',
+          specialty: 'Mantenimiento & Cerrajería',
+          districts: ['Ate', 'La Molina', 'Surco', 'San Borja'],
+          baseRate: 40,
+          rating: 4.6,
+          reviewsCount: 14,
+          warrantyDays: 15,
+          isAvailable: true,
+          phone: '965432198',
+          bio: 'Aperturas de emergencia residenciales sin dañar marco ni puerta, cerraduras de alta seguridad Cantol/Yale y mantenimiento general rápido.'
+        },
+        {
+          id: 'tech-007',
+          name: 'Edwin Paredes Benites',
+          specialty: 'Electricidad',
+          districts: ['Miraflores', 'San Isidro', 'Jesús María', 'Lince'],
+          baseRate: 60,
+          rating: 4.8,
+          reviewsCount: 22,
+          warrantyDays: 45,
+          isAvailable: true,
+          phone: '989012345',
+          bio: 'Técnico electricista para condominios y hogares. Detección rápida de cortocircuitos, instalación de termas de paso Solé y tableros con protección diferencial.'
+        },
+        {
+          id: 'tech-008',
+          name: 'César Córdova Salazar',
+          specialty: 'Gasfitería',
+          districts: ['La Molina', 'Surco', 'Ate'],
+          baseRate: 55,
+          rating: 4.7,
+          reviewsCount: 17,
+          warrantyDays: 30,
+          isAvailable: false,
+          phone: '978901234',
+          bio: 'Gasfitero con movilidad equipada para emergencias en Lima Este. Desatoro mecanizado de tuberías principales, reparación de tanques elevados e inodoros.'
+        },
+        {
+          id: 'tech-009',
+          name: 'David Villanueva Ruiz',
+          specialty: 'Mantenimiento & Cerrajería',
+          districts: ['San Miguel', 'Jesús María', 'Lince', 'Los Olivos'],
+          baseRate: 45,
+          rating: 4.9,
+          reviewsCount: 18,
+          warrantyDays: 30,
+          isAvailable: true,
+          phone: '992345671',
+          bio: 'Técnico multiservicio: cerrajería residencial urgente, cerraduras electrónicas inteligentes, bisagras y ajustes de mamparas de aluminio y vidrio.'
+        },
+        {
+          id: 'tech-010',
+          name: 'Víctor Tello Alarcón',
+          specialty: 'Electricidad',
+          districts: ['San Borja', 'Surco', 'Miraflores', 'San Isidro'],
+          baseRate: 80,
+          rating: 5.0,
+          reviewsCount: 35,
+          warrantyDays: 60,
+          isAvailable: true,
+          phone: '986754321',
+          bio: 'Especialista en diagnóstico técnico de redes eléctricas, recableado general, corrección de fugas que elevan el recibo de luz y automatización.'
+        }
+      ];
+
+      // Reseñas iniciales
+      const INITIAL_REVIEWS = [
+        {
+          id: 'rev-001',
+          techId: 'tech-001',
+          techName: 'Carlos Huamán Quispe',
+          author: 'Mariela Alarcón',
+          district: 'Miraflores',
+          rating: 5,
+          comment: 'Llegó en menos de 25 minutos para solucionar una fuga en el lavadero de la cocina. Muy pulcro y dejó todo impecable.',
+          date: '14 de Octubre, 2026'
+        },
+        {
+          id: 'rev-002',
+          techId: 'tech-002',
+          techName: 'Jorge Quispe Mamani',
+          author: 'Gonzalo Benavides',
+          district: 'Surco',
+          rating: 5,
+          comment: 'Nos quedamos sin luz por un cortocircuito en el tablero principal un domingo. Jorge trajo repuesto de llave térmica y lo resolvió de inmediato.',
+          date: '12 de Octubre, 2026'
+        },
+        {
+          id: 'rev-003',
+          techId: 'tech-005',
+          techName: 'Luis Fernando Ramos',
+          author: 'Claudia De la Cuba',
+          district: 'San Isidro',
+          rating: 5,
+          comment: 'Totalmente recomendado. Detectó la fuga de agua que los anteriores técnicos no podían encontrar. Cumplió con su garantía de 90 días.',
+          date: '10 de Octubre, 2026'
+        },
+        {
+          id: 'rev-004',
+          techId: 'tech-003',
+          techName: 'Rosa Elvira Mamani',
+          author: 'Manuel Falconí',
+          district: 'Jesús María',
+          rating: 5,
+          comment: 'Excelente atención de la maestra Rosa. Cambió el sistema completo del inodoro y la grifería de la ducha con mucha rapidez.',
+          date: '08 de Octubre, 2026'
+        },
+        {
+          id: 'rev-005',
+          techId: 'tech-006',
+          techName: 'Walter Flores Candia',
+          author: 'Carla Zegarra',
+          district: 'Ate',
+          rating: 4,
+          comment: 'Buena atención y precio razonable. Abrió la chapa de mi departamento sin malograr la puerta tras perder las llaves.',
+          date: '05 de Octubre, 2026'
+        }
+      ];
+
+      // Solicitud inicial de demostración
+      const INITIAL_REQUESTS = [
+        {
+          id: 'req-001',
+          code: 'URG-1042',
+          mode: 'urgent',
+          service: 'Gasfitería',
+          district: 'Surco',
+          description: 'Fuga repentina en la llave de paso de la terma eléctrica con goteo constante.',
+          date: '2026-10-15',
+          time: '14:30',
+          clientName: 'Patricia Valdivia',
+          clientPhone: '998112233',
+          status: 'Pendiente',
+          createdAt: '15 Octubre, 2026'
+        }
+      ];
+
+      // Métodos públicos de lectura y guardado
+      return {
+        getTechnicians: () => {
+          const stored = localStorage.getItem(STORAGE_KEYS.TECHNICIANS);
+          if (!stored) {
+            localStorage.setItem(STORAGE_KEYS.TECHNICIANS, JSON.stringify(INITIAL_TECHNICIANS));
+            return INITIAL_TECHNICIANS;
+          }
+          try {
+            return JSON.parse(stored);
+          } catch (e) {
+            console.error('Error parseando técnicos guardados', e);
+            return INITIAL_TECHNICIANS;
+          }
+        },
+
+        saveTechnician: (tech) => {
+          const current = DataStore.getTechnicians();
+          const updated = [tech, ...current];
+          localStorage.setItem(STORAGE_KEYS.TECHNICIANS, JSON.stringify(updated));
+          return updated;
+        },
+
+        getRequests: () => {
+          const stored = localStorage.getItem(STORAGE_KEYS.REQUESTS);
+          if (!stored) {
+            localStorage.setItem(STORAGE_KEYS.REQUESTS, JSON.stringify(INITIAL_REQUESTS));
+            return INITIAL_REQUESTS;
+          }
+          try {
+            return JSON.parse(stored);
+          } catch (e) {
+            console.error('Error parseando solicitudes guardadas', e);
+            return INITIAL_REQUESTS;
+          }
+        },
+
+        saveRequest: (newReq) => {
+          const current = DataStore.getRequests();
+          const updated = [newReq, ...current];
+          localStorage.setItem(STORAGE_KEYS.REQUESTS, JSON.stringify(updated));
+          return updated;
+        },
+
+        updateRequestStatus: (reqId, newStatus) => {
+          const current = DataStore.getRequests();
+          const updated = current.map(r => r.id === reqId ? { ...r, status: newStatus } : r);
+          localStorage.setItem(STORAGE_KEYS.REQUESTS, JSON.stringify(updated));
+          return updated;
+        },
+
+        getReviews: () => {
+          const stored = localStorage.getItem(STORAGE_KEYS.REVIEWS);
+          if (!stored) {
+            localStorage.setItem(STORAGE_KEYS.REVIEWS, JSON.stringify(INITIAL_REVIEWS));
+            return INITIAL_REVIEWS;
+          }
+          try {
+            return JSON.parse(stored);
+          } catch (e) {
+            console.error('Error parseando reseñas guardadas', e);
+            return INITIAL_REVIEWS;
+          }
+        },
+
+        saveReview: (review) => {
+          const currentReviews = DataStore.getReviews();
+          const updatedReviews = [review, ...currentReviews];
+          localStorage.setItem(STORAGE_KEYS.REVIEWS, JSON.stringify(updatedReviews));
+
+          // Recalcular promedio y cantidad de reseñas del técnico
+          const technicians = DataStore.getTechnicians();
+          const techIndex = technicians.findIndex(t => t.id === review.techId);
+          if (techIndex !== -1) {
+            const techReviews = updatedReviews.filter(r => r.techId === review.techId);
+            const sum = techReviews.reduce((acc, r) => acc + Number(r.rating), 0);
+            const newAvg = (sum / techReviews.length).toFixed(1);
+            
+            technicians[techIndex].rating = parseFloat(newAvg);
+            technicians[techIndex].reviewsCount = techReviews.length;
+            localStorage.setItem(STORAGE_KEYS.TECHNICIANS, JSON.stringify(technicians));
+          }
+
+          return { reviews: updatedReviews, technicians };
+        }
+      };
+    })();
+
+    // --------------------------------------------------------------------------
+    // 2. CONTROLADOR PRINCIPAL DE LA APLICACIÓN (TechApp)
+    // --------------------------------------------------------------------------
+    window.TechApp = (() => {
+      // Estado de filtros del directorio
+      let currentFilters = {
+        district: 'all',
+        specialty: 'all',
+        keyword: '',
+        availableOnly: false,
+        sortBy: 'rating'
+      };
+
+      // Estado del formulario de solicitud
+      let requestMode = 'urgent'; // 'urgent' | 'scheduled'
+      let lastSubmittedRequest = null;
+
+      // Paleta para avatares aleatorios elegantes
+      const AVATAR_COLORS = ['#1B2A4A', '#2E4E8E', '#235D43', '#8C5305', '#573353', '#2C4A52'];
+
+      // Generar iniciales
+      const getInitials = (name) => {
+        if (!name) return 'TE';
+        const parts = name.trim().split(/\s+/);
+        if (parts.length >= 2) {
+          return (parts[0][0] + parts[1][0]).toUpperCase();
+        }
+        return name.substring(0, 2).toUpperCase();
+      };
+
+      // Color de avatar consistente basado en el nombre
+      const getAvatarColor = (name) => {
+        let hash = 0;
+        for (let i = 0; i < name.length; i++) {
+          hash = name.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        const index = Math.abs(hash) % AVATAR_COLORS.length;
+        return AVATAR_COLORS[index];
+      };
+
+      // Generar estrellas SVG en HTML
+      const renderStars = (rating) => {
+        const fullStars = Math.floor(rating);
+        let html = '<div class="stars-display">';
+        for (let i = 0; i < 5; i++) {
+          if (i < fullStars) {
+            html += `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
+          } else {
+            html += `<svg width="15" height="15" viewBox="0 0 24 24" fill="#CBD5E1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
+          }
+        }
+        html += `<span class="rating-text">${rating.toFixed(1)}</span></div>`;
+        return html;
+      };
+
+      // Construcción del enlace prellenado de WhatsApp
+      const buildWhatsappUrl = (tech, customDistrict = '', customProblem = '') => {
+        const phone = tech.phone.replace(/\D/g, '');
+        const targetDistrict = customDistrict || (tech.districts && tech.districts[0]) || 'Lima';
+        const problemText = customProblem || `un servicio de ${tech.specialty}`;
+
+        const message = `Hola ${tech.name}, te contacto desde la plataforma TechEmergencia. Necesito auxilio en el distrito de ${targetDistrict} por ${problemText}. ¿Tienes disponibilidad para atender hoy?`;
+        return `https://wa.me/51${phone}?text=${encodeURIComponent(message)}`;
+      };
+
+      // Mostrar notificación Toast flotante
+      const showToast = (message, type = 'info', duration = 4000) => {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+
+        let iconSvg = '';
+        if (type === 'success') {
+          iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+        } else if (type === 'warning') {
+          iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`;
+        } else {
+          iconSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+        }
+
+        toast.innerHTML = `
+          <div style="flex-shrink: 0;">${iconSvg}</div>
+          <div style="flex: 1;">${message}</div>
+        `;
+
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.animation = 'toastOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards';
+          setTimeout(() => {
+            if (toast.parentNode) toast.parentNode.removeChild(toast);
+          }, 300);
+        }, duration);
+      };
+
+      // Crear tarjeta HTML de un técnico
+      const createTechCardHTML = (tech) => {
+        const initials = getInitials(tech.name);
+        const avatarBg = getAvatarColor(tech.name);
+        const waLink = buildWhatsappUrl(tech, currentFilters.district !== 'all' ? currentFilters.district : '');
+
+        const statusBadge = tech.isAvailable
+          ? `<span class="status-badge available"><span class="pulse-dot"></span>Disponible ahora</span>`
+          : `<span class="status-badge unavailable"><span class="pulse-dot gray"></span>No disponible</span>`;
+
+        const districtsChips = tech.districts.slice(0, 4).map(d => `<span class="district-chip">${d}</span>`).join('');
+        const moreDistricts = tech.districts.length > 4 ? `<span class="district-chip">+${tech.districts.length - 4}</span>` : '';
+
+        return `
+          <div class="tech-card" id="card-${tech.id}">
+            <div>
+              <div class="tech-card-header">
+                <div class="avatar-initials" style="background-color: ${avatarBg};">
+                  ${initials}
+                </div>
+                <div class="tech-meta">
+                  <h3 class="tech-name" title="${tech.name}">${tech.name}</h3>
+                  <span class="specialty-pill">${tech.specialty}</span>
+                  <div class="tech-rating-row">
+                    ${renderStars(tech.rating)}
+                    <span class="review-count">(${tech.reviewsCount} reseñas)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-badges-row">
+                ${statusBadge}
+                <span class="warranty-badge" title="Garantía de mano de obra">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  ${tech.warrantyDays} días garantía
+                </span>
+              </div>
+
+              <div class="tech-districts-list">
+                ${districtsChips}
+                ${moreDistricts}
+              </div>
+
+              <p class="tech-bio">${tech.bio}</p>
+            </div>
+
+            <div class="tech-card-footer">
+              <div class="tech-price-row">
+                <span class="price-label">Tarifa base desde:</span>
+                <span class="price-amount">S/ ${tech.baseRate}</span>
+              </div>
+
+              <div class="tech-actions-grid">
+                <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" title="Abrir WhatsApp con mensaje prellenado">
+                  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"></path></svg>
+                  <span>Contactar WhatsApp</span>
+                </a>
+                <button type="button" class="btn-outline" title="Dejar reseña a este técnico" onclick="window.TechApp.quickReviewTech('${tech.id}')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      // Renderizar la sección de Técnicos Destacados (top 3 con mejor calificación)
+      const renderFeaturedTechnicians = () => {
+        const container = document.getElementById('featuredTechniciansContainer');
+        const allTechs = DataStore.getTechnicians();
+        // Ordenar por calificación y luego por reseñas
+        const sorted = [...allTechs].sort((a, b) => b.rating - a.rating || b.reviewsCount - a.reviewsCount);
+        const top3 = sorted.slice(0, 3);
+
+        container.innerHTML = top3.map(t => createTechCardHTML(t)).join('');
+      };
+
+      // Renderizar el Directorio completo de Técnicos con filtros
+      const renderTechniciansDirectory = () => {
+        const container = document.getElementById('techniciansGrid');
+        const emptyState = document.getElementById('emptyStateSearch');
+        const counter = document.getElementById('resultsCounter');
+
+        let list = DataStore.getTechnicians();
+
+        // Filtro por distrito
+        if (currentFilters.district !== 'all') {
+          list = list.filter(t => t.districts.some(d => d.toLowerCase() === currentFilters.district.toLowerCase()));
+        }
+
+        // Filtro por especialidad
+        if (currentFilters.specialty !== 'all') {
+          list = list.filter(t => t.specialty.toLowerCase() === currentFilters.specialty.toLowerCase());
+        }
+
+        // Filtro por disponibilidad
+        if (currentFilters.availableOnly) {
+          list = list.filter(t => t.isAvailable === true);
+        }
+
+        // Filtro por palabra clave (nombre, bio, especialidad)
+        if (currentFilters.keyword.trim() !== '') {
+          const q = currentFilters.keyword.toLowerCase().trim();
+          list = list.filter(t => 
+            t.name.toLowerCase().includes(q) ||
+            t.bio.toLowerCase().includes(q) ||
+            t.specialty.toLowerCase().includes(q) ||
+            t.districts.some(d => d.toLowerCase().includes(q))
+          );
+        }
+
+        // Ordenamiento
+        if (currentFilters.sortBy === 'rating') {
+          list.sort((a, b) => b.rating - a.rating || b.reviewsCount - a.reviewsCount);
+        } else if (currentFilters.sortBy === 'price_asc') {
+          list.sort((a, b) => a.baseRate - b.baseRate);
+        } else if (currentFilters.sortBy === 'warranty') {
+          list.sort((a, b) => b.warrantyDays - a.warrantyDays);
+        } else if (currentFilters.sortBy === 'reviews') {
+          list.sort((a, b) => b.reviewsCount - a.reviewsCount);
+        }
+
+        // Actualizar contador
+        counter.innerHTML = `Mostrando <strong>${list.length} técnico${list.length === 1 ? '' : 's'}</strong> en Lima`;
+
+        if (list.length === 0) {
+          container.innerHTML = '';
+          emptyState.style.display = 'block';
+        } else {
+          emptyState.style.display = 'none';
+          container.innerHTML = list.map(t => createTechCardHTML(t)).join('');
+        }
+      };
+
+      // Renderizar selector de técnicos en el formulario de reseñas
+      const populateReviewTechSelector = () => {
+        const select = document.getElementById('reviewTechSelect');
+        const techs = DataStore.getTechnicians();
+        const currentValue = select.value;
+
+        select.innerHTML = '<option value="" disabled selected>Elige un técnico para calificar</option>' +
+          techs.map(t => `<option value="${t.id}">${t.name} (${t.specialty} · ${t.districts[0] || 'Lima'})</option>`).join('');
+
+        if (currentValue) {
+          select.value = currentValue;
+        }
+      };
+
+      // Renderizar muro de Reseñas
+      const renderReviews = () => {
+        const container = document.getElementById('reviewsContainer');
+        const countBadge = document.getElementById('totalReviewsCountBadge');
+        const reviews = DataStore.getReviews();
+
+        countBadge.innerText = `${reviews.length} reseñas verificadas`;
+
+        if (reviews.length === 0) {
+          container.innerHTML = `
+            <div style="padding: 2rem; text-align: center; color: var(--color-text-muted);">
+              Aún no hay reseñas registradas. ¡Sé el primero en compartir tu experiencia!
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = reviews.map(rev => {
+          const initials = getInitials(rev.author);
+          return `
+            <div class="review-bubble">
+              <div class="review-bubble-header">
+                <div class="reviewer-info">
+                  <div class="reviewer-avatar">${initials}</div>
+                  <div>
+                    <div class="reviewer-name">${rev.author}</div>
+                    <div class="reviewed-tech-tag">Técnico: <strong>${rev.techName}</strong> · ${rev.district}</div>
+                  </div>
+                </div>
+                <div>${renderStars(rev.rating)}</div>
+              </div>
+              <p class="review-text">"${rev.comment}"</p>
+              <div class="review-date">${rev.date}</div>
+            </div>
+          `;
+        }).join('');
+      };
+
+      // Renderizar Mis Solicitudes
+      const renderRequestsHistory = () => {
+        const container = document.getElementById('requestsHistoryContainer');
+        const badge = document.getElementById('myRequestsBadgeCount');
+        const requests = DataStore.getRequests();
+
+        badge.innerText = `${requests.length} registradas`;
+
+        if (requests.length === 0) {
+          container.innerHTML = `
+            <div style="padding: 2rem 1rem; text-align: center; color: var(--color-text-muted); font-size: 0.88rem;">
+              No tienes solicitudes activas. Cuando llenes el formulario de auxilio, aparecerán aquí con su código.
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = requests.map(req => {
+          let badgeClass = 'pending';
+          if (req.status === 'Completada') badgeClass = 'completed';
+          if (req.status === 'Cancelada') badgeClass = 'cancelled';
+
+          const scheduleInfo = req.mode === 'scheduled' && req.date
+            ? `<div style="font-size: 0.78rem; color: var(--color-action); font-weight: 600; margin-top: 4px;">📅 Programada para: ${req.date} ${req.time ? 'a las ' + req.time : ''}</div>`
+            : `<div style="font-size: 0.78rem; color: #92400E; font-weight: 600; margin-top: 4px;">⚡ Atención Inmediata Solicitada</div>`;
+
+          return `
+            <div class="request-item">
+              <div class="request-item-header">
+                <span class="req-code">${req.code}</span>
+                <span class="req-badge ${badgeClass}">${req.status}</span>
+              </div>
+              <div style="font-weight: 700; font-size: 0.94rem; margin-bottom: 2px;">${req.service} · ${req.district}</div>
+              ${scheduleInfo}
+              <div class="req-desc" style="margin-top: 6px;">${req.description}</div>
+              <div class="req-meta-footer">
+                <span>Cliente: ${req.clientName}</span>
+                <span>${req.createdAt}</span>
+              </div>
+              <div style="display: flex; gap: 8px; margin-top: 8px;">
+                ${req.status === 'Pendiente' ? `
+                  <button type="button" class="btn-outline" style="padding: 3px 8px; font-size: 0.74rem;" onclick="window.TechApp.changeRequestStatus('${req.id}', 'Completada')">
+                    Marcar como Atendido
+                  </button>
+                  <button type="button" class="btn-outline" style="padding: 3px 8px; font-size: 0.74rem; color: var(--color-text-muted);" onclick="window.TechApp.changeRequestStatus('${req.id}', 'Cancelada')">
+                    Cancelar
+                  </button>
+                ` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+      };
+
+      // ------------------------------------------------------------------------
+      // Lógica de Cotizador Referencial
+      // ------------------------------------------------------------------------
+      const updateCalculator = () => {
+        const service = document.querySelector('input[name="calcService"]:checked')?.value || 'Gasfitería';
+        const urgency = document.querySelector('input[name="calcUrgency"]:checked')?.value || 'inmediata';
+        const complexity = document.querySelector('input[name="calcComplexity"]:checked')?.value || 'simple';
+
+        const display = document.getElementById('calcPriceRangeDisplay');
+        const desc = document.getElementById('calcComplexityDescription');
+
+        // Base referencial por servicio en Lima
+        let min = 50;
+        let max = 70;
+
+        if (service === 'Gasfitería') {
+          min = 50; max = 75;
+          if (complexity === 'simple') desc.innerText = 'Ej. Cambio de empaque de grifo, ajuste de válvula de inodoro o sifón.';
+          if (complexity === 'media') desc.innerText = 'Ej. Desatoro mecanizado con sonda, cambio de trampa o llave de paso empotrada.';
+          if (complexity === 'compleja') desc.innerText = 'Ej. Filtración interna en pared/techo, cambio de troncal de agua o terma.';
+        } else if (service === 'Electricidad') {
+          min = 55; max = 80;
+          if (complexity === 'simple') desc.innerText = 'Ej. Cambio de tomacorriente, portalámparas o interruptor simple.';
+          if (complexity === 'media') desc.innerText = 'Ej. Cortocircuito sectorial, reemplazo de llave termomagnética o terma.';
+          if (complexity === 'compleja') desc.innerText = 'Ej. Balanceo de cargas en tablero general, recableado troncal o pozo a tierra.';
+        } else {
+          // Cerrajería
+          min = 45; max = 65;
+          if (complexity === 'simple') desc.innerText = 'Ej. Ajuste de cerradura floja, duplicado o cambio de manija exterior.';
+          if (complexity === 'media') desc.innerText = 'Ej. Apertura residencial de puerta cerrada con llave por dentro.';
+          if (complexity === 'compleja') desc.innerText = 'Ej. Instalación de cerradura digital inteligente o cambio integral de cerrojo Cantol.';
+        }
+
+        // Factor de complejidad
+        if (complexity === 'media') {
+          min += 30;
+          max += 45;
+        } else if (complexity === 'compleja') {
+          min += 70;
+          max += 110;
+        }
+
+        // Factor de urgencia
+        if (urgency === 'inmediata') {
+          min += 25;
+          max += 35;
+        } else if (urgency === 'hoy') {
+          min += 10;
+          max += 15;
+        }
+
+        display.innerText = `S/ ${min} - S/ ${max}`;
+      };
+
+      // ------------------------------------------------------------------------
+      // Interacción de Estrellas en el formulario de reseñas
+      // ------------------------------------------------------------------------
+      const initStarPicker = () => {
+        const picker = document.getElementById('starPicker');
+        const hint = document.getElementById('starHintText');
+        const input = document.getElementById('selectedStarValue');
+        const buttons = picker.querySelectorAll('.star-btn');
+
+        const hintMap = {
+          1: '1 estrella - Mal servicio o impuntual',
+          2: '2 estrellas - Regular, hubo dificultades',
+          3: '3 estrellas - Bueno, cumplió lo básico',
+          4: '4 estrellas - Muy buen trabajo y puntual',
+          5: '5 estrellas - ¡Excelente! Rápido, pulcro y recomendado'
+        };
+
+        const updateStarsUI = (val) => {
+          buttons.forEach(btn => {
+            const star = parseInt(btn.getAttribute('data-star'), 10);
+            if (star <= val) {
+              btn.classList.add('active');
+            } else {
+              btn.classList.remove('active');
+            }
+          });
+          hint.innerText = hintMap[val] || '';
+          input.value = val;
+        };
+
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const val = parseInt(btn.getAttribute('data-star'), 10);
+            updateStarsUI(val);
+          });
+
+          btn.addEventListener('mouseenter', () => {
+            const val = parseInt(btn.getAttribute('data-star'), 10);
+            buttons.forEach(b => {
+              const s = parseInt(b.getAttribute('data-star'), 10);
+              if (s <= val) b.classList.add('hover-active');
+              else b.classList.remove('hover-active');
+            });
+            hint.innerText = hintMap[val] || '';
+          });
+
+          btn.addEventListener('mouseleave', () => {
+            buttons.forEach(b => b.classList.remove('hover-active'));
+            updateStarsUI(parseInt(input.value, 10));
+          });
+        });
+
+        // Valor por defecto: 5 estrellas
+        updateStarsUI(5);
+      };
+
+      // ------------------------------------------------------------------------
+      // Control de scroll y navegación fija
+      // ------------------------------------------------------------------------
+      const initNavigation = () => {
+        const header = document.getElementById('siteHeader');
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 20) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+
+          // Active section highlight
+          const scrollPos = window.scrollY + 120;
+          sections.forEach(sec => {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            const id = sec.getAttribute('id');
+            if (scrollPos >= top && scrollPos < top + height) {
+              navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                  link.classList.add('active');
+                }
+              });
+            }
+          });
+        });
+
+        // Mobile menu toggle
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = mobileDrawer.classList.toggle('open');
+          mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close mobile drawer on link click
+        document.querySelectorAll('.mobile-nav-item').forEach(item => {
+          item.addEventListener('click', () => {
+            mobileDrawer.classList.remove('open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      };
+
+      // ------------------------------------------------------------------------
+      // Manejadores de Eventos Públicos (expuestos en TechApp)
+      // ------------------------------------------------------------------------
+      return {
+        init: () => {
+          renderFeaturedTechnicians();
+          renderTechniciansDirectory();
+          populateReviewTechSelector();
+          renderReviews();
+          renderRequestsHistory();
+          updateCalculator();
+          initStarPicker();
+          initNavigation();
+
+          // Inicializar fecha mínima del selector a hoy
+          const dateInput = document.getElementById('reqDate');
+          if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+            dateInput.value = today;
+          }
+        },
+
+        // Búsqueda rápida desde el Hero
+        handleHeroSearch: () => {
+          const district = document.getElementById('heroDistrict').value;
+          const specialty = document.getElementById('heroSpecialty').value;
+
+          currentFilters.district = district;
+          currentFilters.specialty = specialty;
+
+          // Sincronizar con el panel del directorio
+          document.getElementById('filterDistrict').value = district;
+          document.getElementById('filterSpecialty').value = specialty;
+
+          renderTechniciansDirectory();
+
+          // Desplazar suavemente a los resultados
+          const target = document.getElementById('tecnicos');
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+
+          showToast(`Filtrando técnicos en ${district === 'all' ? 'todos los distritos' : district}`, 'info');
+        },
+
+        // Cambio de filtros en el directorio
+        handleFilterChange: () => {
+          currentFilters.district = document.getElementById('filterDistrict').value;
+          currentFilters.specialty = document.getElementById('filterSpecialty').value;
+          currentFilters.keyword = document.getElementById('filterKeyword').value;
+          currentFilters.availableOnly = document.getElementById('filterAvailableOnly').checked;
+          currentFilters.sortBy = document.getElementById('sortBy').value;
+
+          renderTechniciansDirectory();
+        },
+
+        toggleAvailabilityFilter: () => {
+          const chk = document.getElementById('filterAvailableOnly');
+          chk.checked = !chk.checked;
+          window.TechApp.handleFilterChange();
+        },
+
+        resetFilters: () => {
+          currentFilters = {
+            district: 'all',
+            specialty: 'all',
+            keyword: '',
+            availableOnly: false,
+            sortBy: 'rating'
+          };
+          document.getElementById('filterDistrict').value = 'all';
+          document.getElementById('filterSpecialty').value = 'all';
+          document.getElementById('filterKeyword').value = '';
+          document.getElementById('filterAvailableOnly').checked = false;
+          document.getElementById('sortBy').value = 'rating';
+
+          renderTechniciansDirectory();
+          showToast('Filtros restablecidos', 'info');
+        },
+
+        quickFilterDistrict: (district) => {
+          currentFilters.district = district;
+          document.getElementById('filterDistrict').value = district;
+          renderTechniciansDirectory();
+        },
+
+        quickFilterSpecialty: (specialty) => {
+          currentFilters.specialty = specialty;
+          document.getElementById('filterSpecialty').value = specialty;
+          renderTechniciansDirectory();
+        },
+
+        // Modo de solicitud: Urgente o Programada
+        setRequestMode: (mode) => {
+          requestMode = mode;
+          const btnUrgent = document.getElementById('btnModeUrgent');
+          const btnScheduled = document.getElementById('btnModeScheduled');
+          const schedGroup = document.getElementById('scheduledFieldsGroup');
+          const submitLabel = document.getElementById('btnSubmitRequestLabel');
+
+          if (mode === 'urgent') {
+            btnUrgent.classList.add('active', 'urgent-btn');
+            btnScheduled.classList.remove('active');
+            schedGroup.style.display = 'none';
+            document.getElementById('reqDate').required = false;
+            document.getElementById('reqTime').required = false;
+            submitLabel.innerText = 'Enviar Solicitud Urgente';
+          } else {
+            btnScheduled.classList.add('active');
+            btnUrgent.classList.remove('active', 'urgent-btn');
+            schedGroup.style.display = 'grid';
+            document.getElementById('reqDate').required = true;
+            document.getElementById('reqTime').required = true;
+            submitLabel.innerText = 'Registrar Solicitud Programada';
+          }
+        },
+
+        // Enviar formulario de solicitud de auxilio
+        handleRequestSubmit: (e) => {
+          e.preventDefault();
+
+          const service = document.getElementById('reqService').value;
+          const district = document.getElementById('reqDistrict').value;
+          const description = document.getElementById('reqDescription').value.trim();
+          const clientName = document.getElementById('reqClientName').value.trim();
+          const clientPhone = document.getElementById('reqClientPhone').value.trim();
+          const reqDate = document.getElementById('reqDate').value;
+          const reqTime = document.getElementById('reqTime').value;
+
+          if (!service || !district || !description || !clientName || !clientPhone) {
+            showToast('Por favor completa todos los campos requeridos', 'warning');
+            return;
+          }
+
+          if (!/^\d{9}$/.test(clientPhone)) {
+            showToast('Ingresa un número de celular peruano válido (9 dígitos)', 'warning');
+            return;
+          }
+
+          // Generar código único de ticket
+          const randomCode = Math.floor(1000 + Math.random() * 9000);
+          const reqCode = (requestMode === 'urgent' ? 'URG-' : 'PRG-') + randomCode;
+
+          const now = new Date();
+          const dateStr = now.toLocaleDateString('es-PE', { day: 'numeric', month: 'short', year: 'numeric' });
+
+          const newRequest = {
+            id: 'req-' + Date.now(),
+            code: reqCode,
+            mode: requestMode,
+            service,
+            district,
+            description,
+            date: reqDate,
+            time: reqTime,
+            clientName,
+            clientPhone,
+            status: 'Pendiente',
+            createdAt: dateStr
+          };
+
+          DataStore.saveRequest(newRequest);
+          lastSubmittedRequest = newRequest;
+
+          // Actualizar historial en la interfaz
+          renderRequestsHistory();
+
+          // Mostrar modal de confirmación
+          window.TechApp.showConfirmationModal(newRequest);
+
+          // Resetear formulario
+          e.target.reset();
+          window.TechApp.setRequestMode('urgent');
+
+          showToast('¡Solicitud registrada correctamente!', 'success');
+        },
+
+        // Cambiar estado de solicitud (ej. marcar atendido o cancelar)
+        changeRequestStatus: (reqId, newStatus) => {
+          DataStore.updateRequestStatus(reqId, newStatus);
+          renderRequestsHistory();
+          showToast(`Solicitud actualizada a ${newStatus}`, 'info');
+        },
+
+        // Modal de confirmación
+        showConfirmationModal: (req) => {
+          const modal = document.getElementById('confirmationModal');
+          const summary = document.getElementById('modalSummaryBody');
+          const btnText = document.getElementById('modalWhatsappBtnText');
+
+          summary.innerHTML = `
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span>Código de Solicitud:</span>
+              <strong style="color: var(--color-action);">${req.code}</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span>Tipo de Atención:</span>
+              <strong>${req.mode === 'urgent' ? '🚨 Urgente (Inmediata)' : '📅 Programada (' + req.date + ' ' + (req.time || '') + ')'}</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span>Servicio:</span>
+              <strong>${req.service}</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span>Distrito:</span>
+              <strong>${req.district}</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+              <span>Contacto:</span>
+              <strong>${req.clientName} (${req.clientPhone})</strong>
+            </div>
+            <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--color-border); font-size: 0.82rem; color: var(--color-text-muted);">
+              "${req.description}"
+            </div>
+          `;
+
+          btnText.innerText = `Contactar técnico disponible en ${req.district}`;
+          modal.classList.add('active');
+        },
+
+        closeConfirmationModal: () => {
+          document.getElementById('confirmationModal').classList.remove('active');
+        },
+
+        handleModalWhatsappDispatch: () => {
+          if (!lastSubmittedRequest) {
+            window.TechApp.closeConfirmationModal();
+            return;
+          }
+
+          // Buscar el mejor técnico disponible en ese distrito y especialidad
+          const techs = DataStore.getTechnicians();
+          let match = techs.find(t => 
+            t.isAvailable &&
+            t.specialty.toLowerCase() === lastSubmittedRequest.service.toLowerCase() &&
+            t.districts.some(d => d.toLowerCase() === lastSubmittedRequest.district.toLowerCase())
+          );
+
+          // Si no hay exactamente disponible en ese distrito, buscar en la especialidad
+          if (!match) {
+            match = techs.find(t => t.specialty.toLowerCase() === lastSubmittedRequest.service.toLowerCase());
+          }
+
+          if (match) {
+            const url = buildWhatsappUrl(match, lastSubmittedRequest.district, lastSubmittedRequest.description);
+            window.open(url, '_blank');
+          } else {
+            showToast('No se encontró un número directo en este instante, revisa el directorio general.', 'info');
+          }
+
+          window.TechApp.closeConfirmationModal();
+        },
+
+        // Actualizar cotizador y buscar
+        updateCalculator,
+
+        searchFromCalculator: () => {
+          const service = document.querySelector('input[name="calcService"]:checked')?.value || 'Gasfitería';
+          currentFilters.specialty = service;
+          document.getElementById('filterSpecialty').value = service;
+          renderTechniciansDirectory();
+
+          const target = document.getElementById('tecnicos');
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+
+          showToast(`Mostrando técnicos disponibles de ${service}`, 'info');
+        },
+
+        // Rápido acceso para calificar a un técnico específico desde su tarjeta
+        quickReviewTech: (techId) => {
+          const select = document.getElementById('reviewTechSelect');
+          select.value = techId;
+
+          const target = document.getElementById('resenas');
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+
+          showToast('Selecciona la cantidad de estrellas y cuéntanos tu experiencia.', 'info');
+        },
+
+        // Enviar reseña
+        handleReviewSubmit: (e) => {
+          e.preventDefault();
+
+          const techId = document.getElementById('reviewTechSelect').value;
+          const rating = parseInt(document.getElementById('selectedStarValue').value, 10);
+          const author = document.getElementById('reviewAuthor').value.trim();
+          const district = document.getElementById('reviewDistrict').value;
+          const comment = document.getElementById('reviewComment').value.trim();
+
+          if (!techId || !rating || !author || !comment) {
+            showToast('Por favor completa todos los campos de la reseña', 'warning');
+            return;
+          }
+
+          const techs = DataStore.getTechnicians();
+          const targetTech = techs.find(t => t.id === techId);
+          const techName = targetTech ? targetTech.name : 'Técnico';
+
+          const now = new Date();
+          const dateStr = now.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
+
+          const newReview = {
+            id: 'rev-' + Date.now(),
+            techId,
+            techName,
+            author,
+            district,
+            rating,
+            comment,
+            date: dateStr
+          };
+
+          // Guardar y recalcular promedio del técnico
+          DataStore.saveReview(newReview);
+
+          // Actualizar vistas
+          renderReviews();
+          renderFeaturedTechnicians();
+          renderTechniciansDirectory();
+
+          e.target.reset();
+          document.getElementById('selectedStarValue').value = 5;
+          const buttons = document.querySelectorAll('#starPicker .star-btn');
+          buttons.forEach(b => b.classList.add('active'));
+
+          showToast(`¡Gracias! Tu reseña para ${techName} ha sido publicada.`, 'success');
+        },
+
+        // Registrar un nuevo técnico
+        handleTechRegistration: (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById('newTechName').value.trim();
+          const specialty = document.getElementById('newTechSpecialty').value;
+          const phone = document.getElementById('newTechPhone').value.trim();
+          const baseRate = parseInt(document.getElementById('newTechBasePrice').value, 10);
+          const warrantyDays = parseInt(document.getElementById('newTechWarranty').value, 10);
+          const isAvailable = document.getElementById('newTechAvailable').checked;
+          const bio = document.getElementById('newTechBio').value.trim();
+
+          // Obtener distritos seleccionados
+          const selectedDistricts = [];
+          document.querySelectorAll('input[name="techDistricts"]:checked').forEach(cb => {
+            selectedDistricts.push(cb.value);
+          });
+
+          if (selectedDistricts.length === 0) {
+            showToast('Debes seleccionar al menos un distrito de atención en Lima', 'warning');
+            return;
+          }
+
+          if (!/^\d{9}$/.test(phone)) {
+            showToast('El teléfono debe tener 9 dígitos numéricos (ej. 987654321)', 'warning');
+            return;
+          }
+
+          const newTech = {
+            id: 'tech-' + Date.now(),
+            name,
+            specialty,
+            districts: selectedDistricts,
+            baseRate,
+            rating: 5.0, // Calificación inicial perfecta de bienvenida
+            reviewsCount: 1,
+            warrantyDays,
+            isAvailable,
+            phone,
+            bio
+          };
+
+          DataStore.saveTechnician(newTech);
+
+          // También agregar una reseña inicial positiva de validación
+          DataStore.saveReview({
+            id: 'rev-reg-' + Date.now(),
+            techId: newTech.id,
+            techName: newTech.name,
+            author: 'Verificación TechEmergencia',
+            district: selectedDistricts[0],
+            rating: 5,
+            comment: 'Perfil verificado. Documentos y disponibilidad inicial acreditados por el sistema.',
+            date: 'Hoy'
+          });
+
+          // Actualizar selectores y directorios
+          populateReviewTechSelector();
+          renderFeaturedTechnicians();
+          renderTechniciansDirectory();
+          renderReviews();
+
+          e.target.reset();
+          document.getElementById('newTechAvailable').checked = true;
+
+          showToast(`¡Bienvenido ${name}! Tu perfil ya está activo en TechEmergencia.`, 'success', 5000);
+
+          // Desplazar a la sección de técnicos para que vea su tarjeta
+          const target = document.getElementById('tecnicos');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      };
+    })();
+
+    // Inicializar la aplicación cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+      window.TechApp.init();
+    });
+  </script>
+</body>
+</html>
